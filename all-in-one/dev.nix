@@ -22,6 +22,7 @@
     ]))
     pkgs.virtualenv
     pkgs.jupyter
+    pkgs.zip
   ];
   # Sets environment variables in the workspace
   env = {};

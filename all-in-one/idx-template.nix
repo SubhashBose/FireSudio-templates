@@ -23,5 +23,6 @@
     cp -rf ${./dev.nix} "$out/.idx/dev.nix"
     shopt -s dotglob; cp -r ${./content}/* "$out"
     chmod -R +w "$out"
+    mv "$out/.venv/.gitignorex" "$out/.venv/.gitignore"
   '';
 }
