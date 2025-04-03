@@ -24,7 +24,7 @@
     shopt -s dotglob; cp -r ${./content}/* "$out"
     chmod -R +w "$out"
     mv "$out/.venv/.gitignorex" "$out/.venv/.gitignore"
-    find "$out/.venv" -name '*' -type f -exec sed -i "s/\/home\/user\/main/${out//\//\\/}/g" {} +
+    find "$out/.venv" -name '*' -type f -exec sed -i "s#/home/user/main#${out}#g" {} +
     mkdir /home/user/.jupyter
     cp -rf ${./jupyter_lab_config.py} "/home/user/.jupyter/"
   '';
