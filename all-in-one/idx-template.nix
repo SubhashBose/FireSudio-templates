@@ -25,9 +25,9 @@
     chmod -R +w "$out"
     #mv "$out/.venv/.gitignorex" "$out/.venv/.gitignore"
     #find "$out/.venv" -name '*' -type f -exec sed -i "s#/home/user/main#/home/user/$WS_NAME#g" {} +
-    mkdir /home/user/.jupyter
-    pwd > $out/tmp0.out; ls -la ../ >> $out/tmp0.out
-    cp -rf ${./jupyter_lab_config.py} "/home/user/.jupyter/jupyter_lab_config.py"
+    #mkdir /home/user/.jupyter
+    #pwd > $out/tmp0.out; ls -la ../ >> $out/tmp0.out
+    #cp -rf ${./jupyter_lab_config.py} "/home/user/.jupyter/jupyter_lab_config.py"
     cp -rf ${./jupyter_lab_config.py} "$out/jupyter_lab_config.py"
   '';
 }

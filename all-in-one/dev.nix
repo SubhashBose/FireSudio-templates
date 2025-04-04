@@ -72,7 +72,6 @@
         # npm-install = "npm install";
         # Open editors for the following files by default, if they exist:
         copy-jl-config = "mkdir /home/user/.jupyter; mv -f ./jupyter_lab_config.py '/home/user/.jupyter/jupyter_lab_config.py'";
-        test-test = "pwd > tmp.out; ls -la ../ >> tmp.out";
         #create-venv= "python3 -m venv .venv --system-site-packages";
         add-jl-kernel= "python -m ipykernel install --name Python3.11  --user";
         default.openFiles = [ "README.md" ];
@@ -81,7 +80,7 @@
       onStart = {
         # Example: start a background task to watch and re-build backend code
         # watch-backend = "npm run watch-backend";
-        run-jupyter = "jupyter-lab";
+        run-jupyter = "jupyter-lab --no-browser";
       };
     };
   };
