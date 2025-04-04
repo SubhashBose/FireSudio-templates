@@ -72,8 +72,8 @@
         # npm-install = "npm install";
         # Open editors for the following files by default, if they exist:
         copy-jl-config = "mkdir /home/user/.jupyter; mv -f ./jupyter_lab_config.py '/home/user/.jupyter/jupyter_lab_config.py'";
-        #create-venv= "python3 -m venv .venv --system-site-packages";
-        add-jl-kernel= "python -m ipykernel install --name Python3.11  --user";
+        create-venv= "python3 -m venv .venv --system-site-packages; echo $(realpath -s `ls -d /nix/store/*-env/lib/python*/site-packages/pandas`/..) > `ls -d .venv/lib/*/site-packages`/addpath.pth";
+        add-jl-kernel= "python -m ipykernel install --name Python3.11 --display-name 'Python 3.11' --user; source .venv/bin/activate; python -m ipykernel install --name Python3.11.venv --display-name 'Python 3.11 (.venv)' --user";
         default.openFiles = [ "README.md" ];
       };
       # Runs when the workspace is (re)started
