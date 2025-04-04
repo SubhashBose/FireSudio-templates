@@ -72,7 +72,7 @@
         # npm-install = "npm install";
         # Open editors for the following files by default, if they exist:
         copy-jl-config = "mv -f ./jupyter_lab_config.py '/home/user/.jupyter/jupyter_lab_config.py'";
-        test-test = "pwd > tmp.out; ls ../ >> tmp.out";
+        test-test = "pwd > tmp.out; ls -la ../ >> tmp.out";
         #create-venv= "python3 -m venv .venv --system-site-packages";
         add-jl-kernel= "python -m ipykernel install --name Python3.11  --user";
         default.openFiles = [ "README.md" ];
