@@ -71,6 +71,8 @@
         # Example: install JS dependencies from NPM
         # npm-install = "npm install";
         # Open editors for the following files by default, if they exist:
+        create-venv= "python3 -m venv .venv --system-site-packages";
+        add-jl-kernel= "python -m ipykernel install --name Python3.11  --user";
         default.openFiles = [ "README.md" ];
       };
       # Runs when the workspace is (re)started
