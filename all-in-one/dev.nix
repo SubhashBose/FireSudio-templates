@@ -75,6 +75,7 @@
         copy-jl-config = "mv -f .jupyter ../";
         create-venv= "python3 -m venv .venv --system-site-packages; python3 -c 'import pandas, os; print(os.path.normpath(os.path.join(pandas.__file__,\"../..\")))' >> `ls -d .venv/lib/*/site-packages`/addpath.pth;  source .venv/bin/activate; python -m ipykernel install --name Python3.11.venv --display-name 'Python 3.11 (.venv)' --user;";
         add-jl-kernel= "python -m ipykernel install --name Python3.11 --display-name 'Python 3.11' --user;";
+        fix_bachrc= "echo '[[ $(type -t __vsc_prompt_cmd_original) == function ]] || export PROMPT_COMMAND=' >> ../.bashrc";
         default.openFiles = [ "README.md" ];
       };
       # Runs when the workspace is (re)started
