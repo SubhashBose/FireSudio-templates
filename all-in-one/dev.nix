@@ -72,7 +72,7 @@
         # Example: install JS dependencies from NPM
         # npm-install = "npm install";
         # Open editors for the following files by default, if they exist:
-        copy-jl-config = "mv -f ./jupyter ../";
+        copy-jl-config = "mv -f .jupyter ../";
         create-venv= "python3 -m venv .venv --system-site-packages; python3 -c 'import pandas, os; print(os.path.normpath(os.path.join(pandas.__file__,\"../..\")))' >> `ls -d .venv/lib/*/site-packages`/addpath.pth";
         add-jl-kernel= "python -m ipykernel install --name Python3.11 --display-name 'Python 3.11' --user; source .venv/bin/activate; python -m ipykernel install --name Python3.11.venv --display-name 'Python 3.11 (.venv)' --user";
         default.openFiles = [ "README.md" ];
