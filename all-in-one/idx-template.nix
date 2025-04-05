@@ -28,6 +28,6 @@
     #mkdir /home/user/.jupyter
     #pwd > $out/tmp0.out; ls -la ../ >> $out/tmp0.out
     #cp -rf ${./jupyter_lab_config.py} "/home/user/.jupyter/jupyter_lab_config.py"
-    cp -rf ${./jupyter_lab_config.py} "$out/jupyter_lab_config.py"
+    #cp -rf ${./jupyter_lab_config.py} "$out/jupyter_lab_config.py"
   '';
 }
