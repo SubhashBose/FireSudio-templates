@@ -19,9 +19,12 @@
       pandas
       ipython
       matplotlib
+      ipympl
+      jupyterlab-widgets
+      jupyter
     ]))
     pkgs.virtualenv
-    pkgs.jupyter
+    #pkgs.jupyter
     pkgs.zip
   ];
   # Sets environment variables in the workspace
