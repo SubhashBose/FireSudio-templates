@@ -51,6 +51,7 @@
       "ms-azuretools.vscode-docker"
       "moshfeu.diff-merge"
       "YuTengjing.vscode-archive"
+      "qcz.text-power-tools"
     ];
     # Enable previews
     previews = {
